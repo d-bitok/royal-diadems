@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "royal-diadems",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
