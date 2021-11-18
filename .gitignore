@@ -1,2 +1,3 @@
 /node_modules
 /public/assets/js/firebase.js
+/public/uploads/*

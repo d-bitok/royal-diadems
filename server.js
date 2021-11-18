@@ -16,24 +16,22 @@ app.get('/editor', (req, res) => {
     res.sendFile(path.join(initial_path, "editor.html"));
 })
 
-// Upload Link
-app.post('/upload', (res, req) => {
+// upload link
+app.post('/upload', (req, res) => {
     let file = req.files.image;
     let date = new Date();
+    // image name
+    let imagename = date.getDate() + date.getTime() + file.name;
+    // image upload path
+    let path = 'public/uploads/' + imagename;
 
-    // Image Name
-    let img_name = date.getDate() + date.getTime() + file.name;
-
-    // Image Upload Path
-    let path = 'public/uploads/' + img_name;
-
-    // Create Upload
+    // create upload
     file.mv(path, (err, result) => {
-        if (err) {
+        if(err){
             throw err;
-        } else {
-            // Image Upload Path
-            res.json(`uploads/${img_name}`)
+        } else{
+            // our image upload path
+            res.json(`uploads/${imagename}`)
         }
     })
 })
@@ -47,5 +45,5 @@ app.use((req, res) => {
 })
 
 app.listen("3000", () => {
-    console.log('Listening on Port : 3000')
+    console.log('listening......');
 })
