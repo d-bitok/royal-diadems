@@ -3,53 +3,185 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog : </title>
+    <link rel="icon" sizes="192x192" href="./assets/img/royal-diadems-logo.png">
+    <!-- <link rel="icon" sizes="192x192" href="./assets/img/logo-rd.svg"> -->
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 
-    <link rel="stylesheet" href="./assets/css/home.css">
-    <link rel="stylesheet" href="./assets/css/editor.css">
-    <link rel="stylesheet" href="./assets/css/blog.css">
+    <title>Royal Diadems - Blog</title>
 
 </head>
 
 <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <img src="assets/img/royal-diadems-logo.png" alt="" class="nav__img">
+            <a href="#" class="nav__logo">
+                Royal Diadems
+            </a>
 
-    <nav class="navbar">
-        <img src="./assets/img/logo.png" class="logo" alt="">
-        <ul class="links-container">
-            <li class="link-item"><a href="index.html" class="link">home</a></li>
-            <li class="link-item"><a href="./editor.html" class="link">editor</a></li>
-        </ul>
-    </nav>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="./index.html" class="nav__link">
+                            <i class='bx bx-home-alt nav__icon'></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+                    </li>
 
-    <div class="banner"></div>
+                    <li class="nav__item">
+                        <a href="#blog" class="nav__link">
+                            <i class='ri-arrow-up-line nav__icon'></i>
+                            <span class="nav__name">Top</span>
+                        </a>
+                    </li>
 
-    <div class="blog">
-        <h1 class="title"></h1>
-        <p class="published"><span>published at - </span></p>
-        <div class="article">
+                    <li class="nav__item">
+                        <a href="./editor.html " class="nav__link">
+                        <i class='bx bx-pen nav__icon'></i>
+                        <span class="nav__name">Editor</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" hidden id="theme-button"></i>
+            </div>
+            </div>
+        </nav>
+    </header>
 
-        </div>
+    <!-- <div class="banner">
+        <input type="file" accept="image/*" id="banner-upload" hidden>
+        <label for="banner-upload" class="banner-upload-btn"><img src="./assets/img/upload.png" alt="upload banner"></label>
     </div>
 
-    <h1 class="sub-heading">Read more</h1>
+    <div class="blog">
+        <textarea type="text" class="title" placeholder="Blog title..."></textarea>
+        <textarea type="text" class="article" placeholder="Start writing here..."></textarea>
+    </div>
 
-    <!-- blog section -->
-    <section class="blogs-section">
-        <!-- <div class="blog-card">
-            <img src="img/header.png" class="blog-image" alt="">
-            <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
-            <p class="blog-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.</p>
-            <a href="/" class="btn dark">read</a>
+    <div class="blog-options">
+        <button class="btn dark publish-btn">publish</button>
+        <input type="file" accept="image/*" id="image-upload" hidden>
+        <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+    </div> -->
+    <section class="steps section container" id="blog">
+        <div class="steps__container" id="posts"></div>
+        <!-- <div class="steps__container" id="posts">
+            <div class="steps__card">
+                <img class="img__blog" src="./assets/img/img1.png">
+                <div class="steps__card-number">12 Nov 2021</div>
+                <h3 class="steps__card-title">Blog Title</h3>
+                <p class="steps__card-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis
+                    consequuntur
+                    nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis
+                    deserunt
+                    nesciunt.
+                </p>
+                <br>
+                <a href="./blog.html" class="button button--flex">
+                    Read More
+                    <i class="ri-arrow-right-line button__icon"></i>
+                </a>
+            </div>
+            <br>
+            <div class="steps__card">
+                <img class="img__blog" src="./assets/img/img1.png">
+                <div class="steps__card-number">12 Nov 2021</div>
+                <h3 class="steps__card-title">Blog Title</h3>
+                <p class="steps__card-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis
+                    consequuntur
+                    nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis
+                    deserunt
+                    nesciunt.
+                </p>
+                <br>
+                <a href="./blog.html" class="button button--flex">
+                    Read More
+                    <i class="ri-arrow-right-line button__icon"></i>
+                </a>
+            </div>
+            <br>
+            <div class="steps__card">
+                <img class="img__blog" src="./assets/img/img1.png">
+                <div class="steps__card-number">12 Nov 2021</div>
+                <h3 class="steps__card-title">Blog Title</h3>
+                <p class="steps__card-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis
+                    consequuntur
+                    nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis
+                    deserunt
+                    nesciunt.
+                </p>
+                <br>
+                <a href="./blog.html" class="button button--flex">
+                    Read More
+                    <i class="ri-arrow-right-line button__icon"></i>
+                </a>
+            </div>
+            <br>
+            <div class="steps__card">
+                <img class="img__blog" src="./assets/img/img1.png">
+                <div class="steps__card-number">12 Nov 2021</div>
+                <h3 class="steps__card-title">Blog Title</h3>
+                <p class="steps__card-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis
+                    consequuntur
+                    nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis
+                    deserunt
+                    nesciunt.
+                </p>
+                <br>
+                <a href="./blog.html" class="button button--flex">
+                    Read More
+                    <i class="ri-arrow-right-line button__icon"></i>
+                </a>
+            </div>
+            <br>
         </div> -->
     </section>
 
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <!--=============== FIREBASE ===============-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+                       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
 
     <script src="./assets/js/firebase.js"></script>
-    <script src="./assets/js/home.js"></script>
+
+    <!--=============== SCRIPTS ===============-->
+    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/blog.js"></script>
 
 </body>

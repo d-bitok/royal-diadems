@@ -4,16 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" sizes="192x192" href="./assets/img/logo-rd.svg">
+  <link rel="icon" sizes="192x192" href="./assets/img/royal-diadems-logo.png">
+  <!-- <link rel="icon" sizes="192x192" href="./assets/img/logo-rd.svg"> -->
+ 
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+  <!--=============== REMIX ICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!--=============== BOXICONS ===============-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/editor.css">
-  <link rel="stylesheet" href="assets/css/blog.css">
-
+  <link rel="stylesheet" href="assets/css/home.css">
+  
   <title>Royal Diadems</title>
 </head>
 
@@ -21,7 +27,10 @@
   <!--=============== HEADER ===============-->
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="#" class="nav__logo">Royal Diadems</a>
+      <img src="assets/img/royal-diadems-logo.png" alt="" class="nav__img">
+      <a href="#" class="nav__logo">
+        Royal Diadems
+      </a>
 
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
@@ -33,7 +42,7 @@
           </li>
 
           <li class="nav__item">
-            <a href="blog.html" class="nav__link">
+            <a href="#blog" class="nav__link">
               <i class='bx bx-detail nav__icon'></i>
               <span class="nav__name">Blog</span>
             </a>
@@ -45,6 +54,13 @@
               <span class="nav__name">About</span>
             </a>
           </li>
+          
+          <li class="nav__item">
+            <a href="#shop" class="nav__link">
+              <i class='bx bx-basket nav__icon'></i>
+              <span class="nav__name">Shop</span>
+            </a>
+          </li>
 
           <li class="nav__item">
             <a href="#contact" class="nav__link">
@@ -53,49 +69,416 @@
             </a>
           </li>
 
-          <li class="nav__item">
+          <!-- <li class="nav__item">
             <a href="editor.html " class="nav__link">
               <i class='bx bx-pen nav__icon'></i>
               <span class="nav__name">Editor</span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
-
-      <img src="assets/img/logo.svg" alt="" class="nav__img">
+        <div class="nav__btns">
+          <!-- Theme change button -->
+          <i class="ri-moon-line change-theme" hidden id="theme-button"></i>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main class="main">
     <!--=============== HOME ===============-->
-    <section class="container section section__height" id="home">
-      <h2 class="section__title">Home</h2>
+    <section class="home" id="home">
+      <div class="home__container container grid">
+        <img src="assets/img/royal-diadems-logo.png" alt="" class="home__img">
+    
+        <div class="home__data">
+          <h1 class="home__title">
+            We Are His <br> Royal Diadems
+          </h1>
+          <p class="home__description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta a ab dolore cupiditate eius, quibusdam eligendi adipisci beatae quam aperiam sunt maiores, commodi quis et ullam dignissimos nemo id quidem.
+          </p>
+          <a href="#about" class="button button--flex">
+            More About Us <i class="ri-arrow-right-down-line button__icon"></i>
+          </a>
+        </div>
+    
+        <div class="home__social">
+          <span class="home__social-follow">Follow Us</span>
+    
+          <div class="home__social-links">
+            <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+              <i class="ri-twitter-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--=============== BLOG ===============-->
-    <section class="container section section__height" id="blog">
-      <h2 class="section__title">Blog</h2>
+    <section class="steps section container" id="blog">
+        <div class="steps__container grid" id="posts"></div>
+        <!-- <div class="steps__container grid" id="posts">
+          <div class="steps__card">
+          <img class="img__blog" src="./assets/img/img1.png">
+          <div class="steps__card-number">12 Nov 2021</div>
+          <h3 class="steps__card-title">Blog Title</h3>
+          <p class="steps__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis consequuntur
+            nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis deserunt
+            nesciunt.
+          </p>
+          <br>
+          <a href="./blog.html" class="button button--flex">
+            Read More
+            <i class="ri-arrow-right-line button__icon"></i>
+          </a>
+        </div>
+        <div class="steps__card">
+          <img class="img__blog" src="./assets/img/img1.png">
+          <div class="steps__card-number">12 Nov 2021</div>
+          <h3 class="steps__card-title">Blog Title</h3>
+          <p class="steps__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis consequuntur
+            nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis deserunt
+            nesciunt.
+          </p>
+          <br>
+          <a href="./blog.html" class="button button--flex">
+            Read More
+            <i class="ri-arrow-right-line button__icon"></i>
+          </a>
+        </div>
+        <div class="steps__card">
+          <img class="img__blog" src="./assets/img/img1.png">
+          <div class="steps__card-number">12 Nov 2021</div>
+          <h3 class="steps__card-title">Blog Title</h3>
+          <p class="steps__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis consequuntur
+            nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis deserunt
+            nesciunt.
+          </p>
+          <br>
+          <a href="./blog.html" class="button button--flex">
+            Read More
+            <i class="ri-arrow-right-line button__icon"></i>
+          </a>
+        </div>
+        <div class="steps__card">
+          <img class="img__blog" src="./assets/img/img1.png">
+          <div class="steps__card-number">12 Nov 2021</div>
+          <h3 class="steps__card-title">Blog Title</h3>
+          <p class="steps__card-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis consequuntur
+            nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis deserunt
+            nesciunt.
+          </p>
+          <br>
+          <a href="./blog.html" class="button button--flex">
+            Read More
+            <i class="ri-arrow-right-line button__icon"></i>
+          </a>
+        </div>
+        <br>
+        </div> -->
     </section>
 
     <!--=============== ABOUT ===============-->
-    <section class="container section section__height" id="about">
-      <h2 class="section__title">About</h2>
+    <section class="about section container" id="about">
+      <div class="about__container grid">
+        <img src="./assets/img/diadem.jpg" alt="" class="about__img">
+    
+        <div class="about__data">
+          <h2 class="section__title about__title">
+            Who we really are & <br> why choose us
+          </h2>
+    
+          <p class="about__description">
+            We have over 4000+ unbiased reviews and our customers
+            trust our spiritual process and delivery service every time
+          </p>
+    
+          <div class="about__details">
+            <p class="about__details-description">
+              <i class="ri-checkbox-fill about__details-icon"></i>
+              Maiores, illo deserunt dolores,
+              reprehenderit officia eveniet! Unde, tempora?
+            </p>
+            <p class="about__details-description">
+              <i class="ri-checkbox-fill about__details-icon"></i>
+              Culpa porro dignissimos sequi rerum perspiciatis libero obcaecati ullam illum, maiores, illo deserunt dolores,
+              reprehenderit officia eveniet! Unde, tempora?
+            </p>
+            <p class="about__details-description">
+              <i class="ri-checkbox-fill about__details-icon"></i>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, facere recusandae? 
+            </p>
+            <p class="about__details-description">
+              <i class="ri-checkbox-fill about__details-icon"></i>
+              Ipsum dolor sit amet consectetur.
+            </p>
+          </div>
+    
+          <a href="#shop" class="button--link button--flex">
+            Shop Now <i class="ri-arrow-right-down-line button__icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!--==================== SHOP ====================-->
+    <section class="product section container" id="shop">
+      <h2 class="section__title-center">
+        Check out our <br> products
+      </h2>
+    
+      <p class="product__description">
+        Here are some selected items from our showroom, all are in excellent
+        shape. Buy and enjoy best quality.
+      </p>
+    
+      <div class="product__container grid">
+        <article class="product__card">
+          <div class="product__circle"></div>
+    
+          <img src="assets/img/diadem.jpg" alt="" class="product__img">
+    
+          <h3 class="product__title">Item Name</h3>
+          <span class="product__price">KShs. 1009.99</span>
+    
+          <button class="button--flex product__button">
+            <i class="ri-shopping-bag-line"></i>
+          </button>
+        </article>
+    
+        <article class="product__card">
+          <div class="product__circle"></div>
+    
+          <img src="assets/img/diadem.jpg" alt="" class="product__img">
+    
+          <h3 class="product__title">Item Name</h3>
+          <span class="product__price">KShs. 1001.99</span>
+    
+          <button class="button--flex product__button">
+            <i class="ri-shopping-bag-line"></i>
+          </button>
+        </article>
+    
+        <article class="product__card">
+          <div class="product__circle"></div>
+    
+          <img src="assets/img/diadem.jpg" alt="" class="product__img">
+    
+          <h3 class="product__title">Item Name</h3>
+          <span class="product__price">KShs. 700.99</span>
+    
+          <button class="button--flex product__button">
+            <i class="ri-shopping-bag-line"></i>
+          </button>
+        </article>
+    
+        <article class="product__card">
+          <div class="product__circle"></div>
+    
+          <img src="assets/img/diadem.jpg" alt="" class="product__img">
+    
+          <h3 class="product__title">Item Name</h3>
+          <span class="product__price">KShs. 500.99</span>
+    
+          <button class="button--flex product__button">
+            <i class="ri-shopping-bag-line"></i>
+          </button>
+        </article>
+    
+        <article class="product__card">
+          <div class="product__circle"></div>
+    
+          <img src="assets/img/diadem.jpg" alt="" class="product__img">
+    
+          <h3 class="product__title">Item Name</h3>
+          <span class="product__price">KShs. 1000.99</span>
+    
+          <button class="button--flex product__button">
+            <i class="ri-shopping-bag-line"></i>
+          </button>
+        </article>
+    
+        <article class="product__card">
+          <div class="product__circle"></div>
+    
+          <img src="assets/img/diadem.jpg" alt="" class="product__img">
+    
+          <h3 class="product__title">Item Name</h3>
+          <span class="product__price">KShs. 800.99</span>
+    
+          <button class="button--flex product__button">
+            <i class="ri-shopping-bag-line"></i>
+          </button>
+        </article>
+        
+      </div>
     </section>
 
-    <!--=============== CONTACT ===============-->
-    <section class="container section section__height" id="contact">
-      <h2 class="section__title">Contact</h2>
+    <!--==================== CONTACT ====================-->
+    <section class="contact section container" id="contact">
+      <div class="contact__container grid">
+        <div class="contact__box">
+          <h2 class="section__title">
+            Reach out to us today <br> via any of the given <br> information
+          </h2>
+    
+          <div class="contact__data">
+            <div class="contact__information">
+              <h3 class="contact__subtitle">Call us for instant support</h3>
+              <span class="contact__description">
+                <i class="ri-phone-line contact__icon"></i>
+                +254 790 139 154
+              </span>
+            </div>
+    
+            <div class="contact__information">
+              <h3 class="contact__subtitle">Write us by mail</h3>
+              <span class="contact__description">
+                <i class="ri-mail-line contact__icon"></i>
+                jgathuya@gmail.com
+              </span>
+            </div>
+          </div>
+        </div>
+    
+        <form action="" class="contact__form">
+          <div class="contact__inputs">
+            <div class="contact__content">
+              <input type="email" placeholder=" " class="contact__input">
+              <label for="" class="contact__label">Email</label>
+            </div>
+    
+            <div class="contact__content">
+              <input type="text" placeholder=" " class="contact__input">
+              <label for="" class="contact__label">Subject</label>
+            </div>
+    
+            <div class="contact__content contact__area">
+              <textarea name="message" placeholder=" " class="contact__input"></textarea>
+              <label for="" class="contact__label">Message</label>
+            </div>
+          </div>
+    
+          <button class="button button--flex">
+            Send Message
+            <i class="ri-arrow-right-up-line button__icon"></i>
+          </button>
+        </form>
+      </div>
     </section>
   </main>
 
+  <!--==================== FOOTER ====================-->
+  <footer class="footer section">
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <a href="#" class="footer__logo">
+          <!-- <i class="ri-crown footer__logo-icon"></i>  -->
+          Royal Diadems
+        </a>
+  
+        <h3 class="footer__title">
+          Subscribe to our newsletter <br> to stay updated
+        </h3>
+  
+        <div class="footer__subscribe">
+          <input type="email" placeholder="Enter your email" class="footer__input">
+  
+          <button class="button button--flex footer__button">
+            Subscribe
+            <i class="ri-arrow-right-up-line button__icon"></i>
+          </button>
+        </div>
+      </div>
+  
+      <div class="footer__content">
+        <h3 class="footer__title">Our Address</h3>
+  
+        <ul class="footer__data">
+          <li class="footer__information">Nandi Arcade, Room 29</li>
+          <li class="footer__information">Eldoret - 30100</li>
+          <li class="footer__information">Kenya</li>
+        </ul>
+      </div>
+  
+      <div class="footer__content">
+        <h3 class="footer__title">Contact Us</h3>
+  
+        <ul class="footer__data">
+          <li class="footer__information">+254 790 139 154</li>
+  
+          <div class="footer__social">
+            <a href="https://www.facebook.com/" class="footer__social-link">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/" class="footer__social-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://twitter.com/" class="footer__social-link">
+              <i class="ri-twitter-fill"></i>
+            </a>
+          </div>
+        </ul>
+      </div>
+  
+      <div class="footer__content">
+        <h3 class="footer__title">
+          We accept all credit cards
+        </h3>
+  
+        <div class="footer__cards">
+          <img src="assets/img/card1.png" alt="" class="footer__card">
+          <img src="assets/img/card2.png" alt="" class="footer__card">
+          <img src="assets/img/card3.png" alt="" class="footer__card">
+          <img src="assets/img/card4.png" alt="" class="footer__card">
+        </div>
+      </div>
+    </div>
+  
+    <p class="footer__copy">&#169; Royal Diadems. All rigths reserved</p>
+  </footer>
+
+  <!--=============== SCROLL REVEAL ===============-->
+  <script src="assets/js/scrollreveal.min.js"></script>
+
+  <!--=============== FIREBASE ===============-->
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+                   https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+  
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+
+  <script src="assets/js/firebase.js"></script>
+  
 
   <!--=============== SCRIPTS ===============-->
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
-  <script src="assets/js/firebase.js"></script>
+
   <script src="assets/js/main.js"></script>
   <script src="assets/js/home.js"></script>
-  <script src="assets/js/blog.js"></script>
 </body>
 
 </html>

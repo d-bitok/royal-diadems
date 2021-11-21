@@ -1,29 +1,52 @@
-// import { db } from "./firebase";
+/*=============== GET FROM DATABASE ===============*/
+window.onload = function () {
+    this.getData();
+}
 
-const blogSection = document.querySelector('.blogs-section');
-
-db.collection("blogs").get().then((blogs) => {
-    blogs.forEach(blog => {
-        if (blog.id != decodeURI(location.pathname.split("/").pop())){
-            createBlog(blog);
+function getData() {
+    firebase.database().ref('blogs/').once('value')
+    .then(
+        function (snapshot) {
+        // Get Your Posts
+        var posts_div = document.getElementById('posts');
+        // Remove All Existing Data In Div Element
+        posts.innerHTML = "";
+        // Get Data From Firebase
+        var data = snapshot.val();
+        console.log(data);
+        // Pass Data To Posts
+        // Data Passed To For Loop To Get One By One
+        for (let [key, value] of Object.entries(data)) {
+            posts_div.innerHTML =
+            // "<br>"+
+            // "<div class='steps__card'>" +
+            //     "<img src='" + value.imageURL + "' alt='Blog Image'>"+
+            //     "<br>" +
+            //     "<div class='steps__card-number'>01-11-2021</div>"+
+            //     "<h3 class='steps__card-title'>Consectetur adipisicing</h3>"+
+            //     "<p class='steps__card-description'>" + value.text +
+            //     "</p>" +
+            //     "<a href='./blog.html' class='button button--flex'>" +
+            //     "Read More" +
+            //     "<i class='ri-arrow-right-line button__icon'></i>"+
+            //     "</a>"+
+            // "</div>";
+            `
+            <div class="steps__card">
+            <img class="img__blog" src="${value.bannerImageURL}">
+            <div class="steps__card-number">${value.publishedOn}</div>
+            <h3 class="steps__card-title">${value.title}</h3>
+                <p class="steps__card-description">
+                    ${value.post.substring(0, 200)}
+                </p>
+                <br>
+                <a href="./blog.html" class="button button--flex">
+                Read More
+                <i class="ri-arrow-right-line button__icon"></i>
+                </a>
+            </div>
+            `+posts_div.innerHTML;
         }
-    });
-})
-
-
-const createBlog = (blog) => {
-    let data = blog.data();
-    blogSection.innerHTML += `
-    <div class="blog-card">
-        <img src="${data.bannerImage}" class="blog-image" alt="">
-        <h1 class="blog-title">
-            ${data.title.substring(0, 100) + '...'}
-        </h1>
-        <p class="blog-overview">
-            ${data.article.substring(0, 200) + '...'}
-        </p>
-        <a href="/${blog.id}" class="btn dark">
-            Read
-        </a>
-    </div>`;
+        }
+    )
 }
