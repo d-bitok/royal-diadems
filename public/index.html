@@ -36,7 +36,7 @@
         <ul class="nav__list">
           <li class="nav__item">
             <a href="#home" class="nav__link active-link">
-              <i class='bx bx-home-alt nav__icon'></i>
+              <i class='bx bx-home nav__icon'></i>
               <span class="nav__name">Home</span>
             </a>
           </li>
@@ -50,12 +50,12 @@
 
           <li class="nav__item">
             <a href="#about" class="nav__link">
-              <i class='bx bx-user nav__icon'></i>
+              <i class='bx bx-user-pin nav__icon'></i>
               <span class="nav__name">About</span>
             </a>
           </li>
           
-          <li class="nav__item">
+          <li class="nav__item" hidden>
             <a href="#shop" class="nav__link">
               <i class='bx bx-basket nav__icon'></i>
               <span class="nav__name">Shop</span>
@@ -77,10 +77,13 @@
           </li> -->
         </ul>
       </div>
-        <div class="nav__btns">
-          <!-- Theme change button -->
-          <i class="ri-moon-line change-theme" hidden id="theme-button"></i>
-        </div>
+      <div class="nav__btns">
+        <!-- Theme change button -->
+        <i class="ri-moon-line nav-icon" id="theme-button"></i>
+        <!-- Login button -->
+        <a href="./authentication.html">
+          <i class="bx bx-user nav-icon"></i>
+        </a>
       </div>
     </nav>
   </header>
@@ -233,7 +236,7 @@
     </section>
     
     <!--==================== SHOP ====================-->
-    <section class="product section container" id="shop">
+    <section class="product section container" hidden id="shop">
       <h2 class="section__title-center">
         Check out our <br> products
       </h2>
@@ -351,21 +354,21 @@
             </div>
           </div>
         </div>
-    
-        <form action="" class="contact__form">
+
+        <form class="contact__form" action="https://formsubmit.co/jgathuya@gmail.com" method="POST">
           <div class="contact__inputs">
             <div class="contact__content">
-              <input type="email" placeholder=" " class="contact__input">
+              <input type="email" name="contact-email" placeholder=" " class="contact__input">
               <label for="" class="contact__label">Email</label>
             </div>
     
             <div class="contact__content">
-              <input type="text" placeholder=" " class="contact__input">
+              <input type="text" name="contact-subject" placeholder=" " class="contact__input">
               <label for="" class="contact__label">Subject</label>
             </div>
     
             <div class="contact__content contact__area">
-              <textarea name="message" placeholder=" " class="contact__input"></textarea>
+              <textarea name="message" name="contact-message" placeholder=" " class="contact__input"></textarea>
               <label for="" class="contact__label">Message</label>
             </div>
           </div>
@@ -392,14 +395,15 @@
           Subscribe to our newsletter <br> to stay updated
         </h3>
   
-        <div class="footer__subscribe">
-          <input type="email" placeholder="Enter your email" class="footer__input">
-  
-          <button class="button button--flex footer__button">
-            Subscribe
-            <i class="ri-arrow-right-up-line button__icon"></i>
-          </button>
-        </div>
+        <form class="footer__subscribe" action="https://formsubmit.co/jgathuya@gmail.com" method="POST">
+            <input class="footer__input" name="new-subscriber" id="subscribeEmail" type="email"
+                placeholder="Email Address">
+            <input hidden name="_next" value="https://royal-diadems.web.app/index.html">
+            <button class="button button--flex footer__button">
+                Subscribe
+                <i class="ri-arrow-right-up-line button__icon"></i>
+            </button>
+        </form>
       </div>
   
       <div class="footer__content">

@@ -186,6 +186,32 @@ body {
   text-transform: capitalize;
 }
 
+.btn-delete {
+  background-color: rgba(255, 0, 0, 0.278);
+  color: rgb(2, 1, 1);
+  padding: 1rem;
+  transition: 1s;
+}
+
+.btn-delete:hover {
+  background-color: red;
+  color: white;
+  padding: 1rem;
+}
+
+.btn-update {
+  background-color: rgba(89, 255, 0, 0.319);
+  color: rgb(8, 8, 8);
+  padding: 1rem;
+  transition: 1s;
+}
+
+.btn-update:hover {
+  background-color: rgb(12, 172, 34);
+  color: rgb(255, 254, 254);
+  padding: 1rem;
+}
+
 .blogs-section {
   width: 100%;
   padding: 50px 5vw;

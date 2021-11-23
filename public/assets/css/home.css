@@ -21,7 +21,8 @@
   --text-color: hsl(var(--hue), 4%, 35%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
   --body-color: hsl(var(--hue), 0%, 100%);
-  --container-color: #fadbd1;
+  --container-color: #ffff;
+  --container-color-alt: #fadbd1;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -137,7 +138,7 @@ body.dark-theme {
   --container-color: hsl(var(--hue), 8%, 16%);
 }
 /*========== Button Dark/Light ==========*/
-.change-theme {
+.nav-icon {
   color: var(--title-color);
   font-size: 1.15rem;
   cursor: pointer;
@@ -268,11 +269,12 @@ the website, in dark theme
 .home__social-link {
   font-size: 1rem;
   color: var(--first-color);
-  transition: 0.3s;
+  transition: 1s;
 }
 
 .home__social-link:hover {
   transform: translateX(0.25rem);
+  color: #fb531a;
 }
 
 /*=============== BUTTONS ===============*/
@@ -388,7 +390,7 @@ the website, in dark theme
 }
 
 .steps__card {
-  background-color: var(--container-color);
+  background-color: var(--container-color-alt);
   padding: 2.5rem 3rem 2rem 1.5rem;
   border-radius: 1rem;
   transition: 1.6s;
@@ -420,6 +422,7 @@ the website, in dark theme
 
 .steps__card:hover .steps__card-number {
   transform: translateY(-0.25rem);
+  color: #f2a991;
 }
 
 /*=============== PRODUCTS ===============*/
@@ -722,11 +725,12 @@ the website, in dark theme
 .footer__social-link {
   font-size: 1rem;
   color: var(--text-color);
-  transition: 0.3s;
+  transition: 1s;
 }
 
 .footer__social-link:hover {
   transform: translateY(-0.25rem);
+  color: #fb531a;
 }
 
 .footer__cards {

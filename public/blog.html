@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/home.css">
 
-    <title>Royal Diadems - Blog</title>
+    <title>Blog - Royal Diadems</title>
 
 </head>
 
@@ -30,57 +30,47 @@
         <nav class="nav container">
             <img src="assets/img/royal-diadems-logo.png" alt="" class="nav__img">
             <a href="#" class="nav__logo">
-                Royal Diadems
+                Royal Diadems - Blog Page
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="./index.html" class="nav__link">
-                            <i class='bx bx-home-alt nav__icon'></i>
+                            <i class='bx bx-home nav__icon'></i>
                             <span class="nav__name">Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#blog" class="nav__link">
+                        <a href="#top" class="nav__link">
                             <i class='ri-arrow-up-line nav__icon'></i>
                             <span class="nav__name">Top</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="./editor.html " class="nav__link">
-                        <i class='bx bx-pen nav__icon'></i>
-                        <span class="nav__name">Editor</span>
+                        <a href="#bottom" class="nav__link">
+                        <i class='ri-arrow-down-line nav__icon'></i>
+                        <span class="nav__name">Bottom</span>
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="nav__btns">
                 <!-- Theme change button -->
-                <i class="ri-moon-line change-theme" hidden id="theme-button"></i>
-            </div>
+                <i class="ri-moon-line nav-icon" id="theme-button"></i>
+                <!-- Login button -->
+                <a href="./authentication.html">
+                <i class="bx bx-user nav-icon"></i>
+                </a>
             </div>
         </nav>
     </header>
-
-    <!-- <div class="banner">
-        <input type="file" accept="image/*" id="banner-upload" hidden>
-        <label for="banner-upload" class="banner-upload-btn"><img src="./assets/img/upload.png" alt="upload banner"></label>
-    </div>
-
-    <div class="blog">
-        <textarea type="text" class="title" placeholder="Blog title..."></textarea>
-        <textarea type="text" class="article" placeholder="Start writing here..."></textarea>
-    </div>
-
-    <div class="blog-options">
-        <button class="btn dark publish-btn">publish</button>
-        <input type="file" accept="image/*" id="image-upload" hidden>
-        <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
-    </div> -->
     <section class="steps section container" id="blog">
+        <div>
+            <h1 class="section__title-center" style="font-size: 36px">Welcome to Our Blog</h1>
+        </div>
         <div class="steps__container" id="posts"></div>
         <!-- <div class="steps__container" id="posts">
             <div class="steps__card">
@@ -157,6 +147,81 @@
             <br>
         </div> -->
     </section>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section" id="bottom">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <!-- <i class="ri-crown footer__logo-icon"></i>  -->
+                    Royal Diadems
+                </a>
+    
+                <h3 class="footer__title">
+                    Subscribe to our newsletter <br> to stay updated
+                </h3>
+    
+                <form class="footer__subscribe" action="https://formsubmit.co/jgathuya@gmail.com" method="POST">
+                    <input class="footer__input" name="new-subscriber" id="subscribeEmail" type="email"
+                        placeholder="Email Address">
+                    <input hidden name="_next" value="https://royal-diadems.web.app/blog.html">
+                    <button class="button button--flex footer__button">
+                        Subscribe
+                        <i class="ri-arrow-right-up-line button__icon"></i>
+                    </button>
+                </form>
+            </div>
+    
+            <div class="footer__content">
+                <h3 class="footer__title">Our Address</h3>
+    
+                <ul class="footer__data">
+                    <li class="footer__information">Nandi Arcade, Room 29</li>
+                    <li class="footer__information">Eldoret - 30100</li>
+                    <li class="footer__information">Kenya</li>
+                </ul>
+            </div>
+    
+            <div class="footer__content">
+                <h3 class="footer__title">Contact Us</h3>
+    
+                <ul class="footer__data">
+                    <li class="footer__information">+254 790 139 154</li>
+    
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/" class="footer__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="footer__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="footer__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+    
+            <div class="footer__content">
+                <h3 class="footer__title">
+                    We accept all credit cards
+                </h3>
+    
+                <div class="footer__cards">
+                    <img src="assets/img/card1.png" alt="" class="footer__card">
+                    <img src="assets/img/card2.png" alt="" class="footer__card">
+                    <img src="assets/img/card3.png" alt="" class="footer__card">
+                    <img src="assets/img/card4.png" alt="" class="footer__card">
+                </div>
+            </div>
+        </div>
+    
+        <p class="footer__copy">&#169; Royal Diadems. All rigths reserved</p>
+    </footer>
+    
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
 
     <!--=============== FIREBASE ===============-->
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>

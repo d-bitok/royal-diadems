@@ -170,7 +170,9 @@ function getData() {
                 Read More
                 <i class="ri-arrow-right-line button__icon"></i>
                 </a>
-                <button class="btn btn-danger" id="${key}" onclick="delete_post(this.id)">Delete</button>
+                <pre>       </pre>
+                <button class="btn btn-delete" id="${key}" onclick="delete_post(this.id)">Delete</button>
+                <button class="btn btn-update" id="${key}" onclick="update_post(this.id)" hidden>Update</button>
             </div>
             `+posts_div.innerHTML;
         }
@@ -182,3 +184,8 @@ function delete_post(key) {
     firebase.database().ref('blogs/'+key).remove();
     getData();
 }
+
+// function update_post(key) {
+//     firebase.database().ref('blogs/'+key).update({'title': value.title});
+//     getData();
+// }
