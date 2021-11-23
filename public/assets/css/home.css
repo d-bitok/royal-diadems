@@ -22,7 +22,7 @@
   --text-color-light: hsl(var(--hue), 4%, 55%);
   --body-color: hsl(var(--hue), 0%, 100%);
   --container-color: #ffff;
-  --container-color-alt: #fadbd1;
+  --container-color-alt: #ffe6de;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -136,12 +136,24 @@ body.dark-theme {
   --text-color: hsl(var(--hue), 4%, 75%);
   --body-color: hsl(var(--hue), 8%, 12%);
   --container-color: hsl(var(--hue), 8%, 16%);
+  --container-color-alt: hsl(var(--hue), 8%, 16%);
 }
+
+/* body.auth-logout {
+
+} */
 /*========== Button Dark/Light ==========*/
 .nav-icon {
   color: var(--title-color);
   font-size: 1.15rem;
   cursor: pointer;
+}
+
+.auth-icon {
+  color: var(--title-color);
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding-top: 5px;
 }
 
 .nav__btns {

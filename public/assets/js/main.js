@@ -103,6 +103,29 @@ function scrollUp(){
 }
 window.addEventListener('scroll', scrollUp)
 
+/*=============== AUTHENTICATION BUTTON ===============*/ 
+const authButton = document.getElementById('auth-button');
+const authLogout = 'auth-logout'; 
+const logIcon = 'bx-user-check';
+
+const authStatus = localStorage.getItem('auth-status');
+const authStatusIcon = localStorage.getItem('auth-status-icon');
+
+const getCurrentAuthStatus = () => document.body.classList.contains(authLogout) ? 'logout' : 'login';
+const getCurrentAuthStatusIcon = () => authButton.body.classList.contains(logIcon) ? 'bx-user-check' : 'bx-user-x';
+
+if (authStatus) {
+    document.body.classList[authStatus === 'logout' ? 'add' : 'remove'](authLogout)
+    authButton.classList[authStatusIcon === 'bx-user-x' ? 'add' : 'remove'](logIcon)
+}
+
+authButton.addEventListener('click', () => {
+    document.body.classList.toggle(authLogout);
+    authButton.classList.toggle(logIcon);
+    localStorage.setItem('auth-status', getCurrentAuthStatus());
+    localStorage.setItem('auth-status-icon', getCurrentAuthStatusIcon());
+})
+
 /*=============== DARK LIGHT THEME ===============*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
