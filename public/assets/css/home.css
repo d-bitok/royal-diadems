@@ -139,9 +139,6 @@ body.dark-theme {
   --container-color-alt: hsl(var(--hue), 8%, 16%);
 }
 
-/* body.auth-logout {
-
-} */
 /*========== Button Dark/Light ==========*/
 .nav-icon {
   color: var(--title-color);
