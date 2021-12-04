@@ -40,7 +40,7 @@ function getData() {
                     ${value.post.substring(0, 200)}
                 </p>
                 <br>
-                <a href="./blog.html" class="button button--flex">
+                <a href="https://royal-diadems.vercel.app/" class="button button--flex">
                 Read More
                 <i class="ri-arrow-right-line button__icon"></i>
                 </a>
