@@ -324,6 +324,26 @@ the website, in dark theme
 .button--link:hover .button__icon {
   transform: translateX(0.25rem);
 }
+/*=============== BUTTONS ===============*/
+.next--button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 6px;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+  opacity: 0.6;
+}
+
+.next--button:hover {
+  background-color: var(--gold-color);
+  color: #000;
+}
+
+.next--button:hover {
+  transform: translateX(0.25rem);
+}
 
 /*=============== ABOUT ===============*/
 .about__container {

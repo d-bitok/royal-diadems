@@ -279,7 +279,7 @@ img {
 
 @media screen and (min-width: 320px) {
   .bg-video {
-    /* max-height: 650px; */
+    max-height: 650px;
     max-width: 420px;
   }
 }

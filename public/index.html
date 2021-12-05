@@ -109,7 +109,7 @@
             We Are His <br> Royal Diadems
           </h1>
           <p class="home__description" style="color: white;">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta a ab dolore cupiditate eius, quibusdam eligendi adipisci beatae quam aperiam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
           </p>
           <a href="#blog" class="button button--flex">
             Our Blog <i class="ri-arrow-right-down-line button__icon"></i>
@@ -117,10 +117,13 @@
         </div>
     
         <div class="home__social">
-          <a id="playlist-next" class="button button--flex" style="cursor: pointer;">
-          Next
+          <div class="next--button">
+          <a id="playlist-next" class="button--flex" style="cursor: pointer;">
+              Next
             <i class="ri-play-fill button__icon"></i>
         </a>
+
+          </div>
 
           <span class="home__social-follow">Follow Us</span>
     
@@ -141,10 +144,12 @@
 
     <!--=============== BLOG ===============-->
     <section class="steps section container" id="blog">
-      
+      <div>
+        <h1 class="section__title-center" style="font-size: 36px">Our Recent Blogs</h1>
+      </div>
         <iframe src="https://royal-diadems.vercel.app/preview" name="frame" scrolling="no" frameborder="no"
           allow="fullscreen" align="center" height="320px" style="border-radius: 12px;" width="98%"></iframe>
-          <div style="margin-top: 10px;">
+          <div style="margin-top: 10px;" hidden>
           <a href="https://royal-diadems.vercel.app/" class="button button--flex">
             Checkout More <i class="ri-arrow-right-line button__icon"></i>
           </a>
