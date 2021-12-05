@@ -57,16 +57,16 @@
           </li> -->
 
           <li class="nav__item">
-            <a href="#about" class="nav__link">
-              <i class='bx bx-message-square-detail nav__icon'></i>
-              <span class="nav__name">Contact</span>
+            <a href="#blog" class="nav__link">
+              <i class='bx bx-detail nav__icon'></i>
+              <span class="nav__name">Blog</span>
             </a>
           </li>
 
           <li class="nav__item">
-            <a href="https://royal-diadems.vercel.app/" class="nav__link">
-              <i class='bx bx-detail nav__icon'></i>
-              <span class="nav__name">Blog</span>
+            <a href="#about" class="nav__link">
+              <i class='bx bx-message-square-detail nav__icon'></i>
+              <span class="nav__name">Contact</span>
             </a>
           </li>
 
@@ -90,19 +90,29 @@
 
   <main class="main">
     <!--=============== HOME ===============-->
+    <div class="container">
+    <video autoplay="" shuffle="" muted="" style="margin-left: -30px; position: absolute; max-height: 650px; border-radius: 16px;"
+        poster="https://images.pexels.com/photos/3725709/pexels-photo-3725709.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+        >
+        <source src="https://vod-progressive.akamaized.net/exp=1638700360~acl=%2A%2F738940480.mp4%2A~hmac=6490c101158b6beb0cf9f462dde5603367d1af269879151c16c5b316d85c63be/vimeo-prod-skyfire-std-us/01/2891/8/214459918/738940480.mp4">
+        <source src="https://vod-progressive.akamaized.net/exp=1638702831~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1606%2F18%2F458032038%2F2022847018.mp4~hmac=c06b27c93f98da62f70940776f0b89e0ff8b6a808ea912f369759597bc4f73cd/vimeo-prod-skyfire-std-us/01/1606/18/458032038/2022847018.mp4">
+      </video>
+    </div>
+
     <section class="home" id="home">
-      <div class="home__container container grid">
+      
+      <div style="top: -5px;" class="home__container container grid">
         <img src="assets/img/royal-diadems-logo.png" alt="" class="home__img">
     
         <div class="home__data">
-          <h1 class="home__title">
+          <h1 class="home__title" style="color: white;">
             We Are His <br> Royal Diadems
           </h1>
-          <p class="home__description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta a ab dolore cupiditate eius, quibusdam eligendi adipisci beatae quam aperiam sunt maiores, commodi quis et ullam dignissimos nemo id quidem.
+          <p class="home__description" style="color: white;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta a ab dolore cupiditate eius, quibusdam eligendi adipisci beatae quam aperiam.
           </p>
-          <a href="https://royal-diadems.vercel.app/" class="button button--flex">
-            Checkout Our Blog <i class="ri-arrow-right-line button__icon"></i>
+          <a href="#blog" class="button button--flex">
+            Our Blog <i class="ri-arrow-right-down-line button__icon"></i>
           </a>
         </div>
     
@@ -125,72 +135,17 @@
     </section>
 
     <!--=============== BLOG ===============-->
-    <!-- <section class="steps section container" id="blog"> -->
-        <!-- <div class="steps__container grid" id="posts"></div> -->
-        <!-- <div class="steps__container grid" id="posts">
-          <div class="steps__card">
-          <img class="img__blog" src="./assets/img/img1.png">
-          <div class="steps__card-number">12 Nov 2021</div>
-          <h3 class="steps__card-title">Blog Title</h3>
-          <p class="steps__card-description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis consequuntur
-            nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis deserunt
-            nesciunt.
-          </p>
-          <br>
-          <a href="./blog.html" class="button button--flex">
-            Read More
-            <i class="ri-arrow-right-line button__icon"></i>
+    <section class="steps section container" id="blog">
+      
+        <iframe src="https://royal-diadems.vercel.app/preview" name="frame" scrolling="no" frameborder="no"
+          allow="fullscreen" align="center" height="320px" style="border-radius: 12px;" width="98%"></iframe>
+          <div style="margin-top: 10px;">
+          <a href="https://royal-diadems.vercel.app/" class="button button--flex">
+            Checkout More <i class="ri-arrow-right-line button__icon"></i>
           </a>
-        </div>
-        <div class="steps__card">
-          <img class="img__blog" src="./assets/img/img1.png">
-          <div class="steps__card-number">12 Nov 2021</div>
-          <h3 class="steps__card-title">Blog Title</h3>
-          <p class="steps__card-description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis consequuntur
-            nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis deserunt
-            nesciunt.
-          </p>
-          <br>
-          <a href="./blog.html" class="button button--flex">
-            Read More
-            <i class="ri-arrow-right-line button__icon"></i>
-          </a>
-        </div>
-        <div class="steps__card">
-          <img class="img__blog" src="./assets/img/img1.png">
-          <div class="steps__card-number">12 Nov 2021</div>
-          <h3 class="steps__card-title">Blog Title</h3>
-          <p class="steps__card-description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis consequuntur
-            nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis deserunt
-            nesciunt.
-          </p>
-          <br>
-          <a href="./blog.html" class="button button--flex">
-            Read More
-            <i class="ri-arrow-right-line button__icon"></i>
-          </a>
-        </div>
-        <div class="steps__card">
-          <img class="img__blog" src="./assets/img/img1.png">
-          <div class="steps__card-number">12 Nov 2021</div>
-          <h3 class="steps__card-title">Blog Title</h3>
-          <p class="steps__card-description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas error molestias repudiandae perferendis consequuntur
-            nesciunt sed! Soluta maxime corporis aspernatur nobis inventore odit dolorum, at, aperiam sequi, debitis deserunt
-            nesciunt.
-          </p>
-          <br>
-          <a href="./blog.html" class="button button--flex">
-            Read More
-            <i class="ri-arrow-right-line button__icon"></i>
-          </a>
-        </div>
-        <br>
-        </div> -->
-    <!-- </section> -->
+
+          </div>
+  </section>
 
     <!--=============== ABOUT ===============-->
     <section class="about section container" id="about">
