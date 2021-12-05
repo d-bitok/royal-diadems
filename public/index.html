@@ -90,19 +90,19 @@
 
   <main class="main">
     <!--=============== HOME ===============-->
-    <div class="container">
-    <video autoplay="" shuffle="" muted="" style="margin-left: -30px; position: absolute; max-height: 650px; border-radius: 16px;"
-        poster="https://images.pexels.com/photos/3725709/pexels-photo-3725709.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+    <figure class="container" id="video_player">
+    <video autoplay="" loop="" muted="" allow="autoplay" class="bg-video" webkit-playsinline="" 
+        poster="./assets/img/bg-diadem.jpg"
         >
-        <source src="https://vod-progressive.akamaized.net/exp=1638700360~acl=%2A%2F738940480.mp4%2A~hmac=6490c101158b6beb0cf9f462dde5603367d1af269879151c16c5b316d85c63be/vimeo-prod-skyfire-std-us/01/2891/8/214459918/738940480.mp4">
-        <source src="https://vod-progressive.akamaized.net/exp=1638702831~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1606%2F18%2F458032038%2F2022847018.mp4~hmac=c06b27c93f98da62f70940776f0b89e0ff8b6a808ea912f369759597bc4f73cd/vimeo-prod-skyfire-std-us/01/1606/18/458032038/2022847018.mp4">
+        <source src="./assets/vid/bg-video-0.mp4" type="video/mp4">
+      
       </video>
-    </div>
+    </figure>
 
     <section class="home" id="home">
       
       <div style="top: -5px;" class="home__container container grid">
-        <img src="assets/img/royal-diadems-logo.png" alt="" class="home__img">
+        <!-- <img src="assets/img/royal-diadems-logo.png" alt="" class="home__img"> -->
     
         <div class="home__data">
           <h1 class="home__title" style="color: white;">
@@ -117,6 +117,11 @@
         </div>
     
         <div class="home__social">
+          <a id="playlist-next" class="button button--flex" style="cursor: pointer;">
+          Next
+            <i class="ri-play-fill button__icon"></i>
+        </a>
+
           <span class="home__social-follow">Follow Us</span>
     
           <div class="home__social-links">
@@ -436,6 +441,90 @@
 
   <script src="assets/js/main.js"></script>
   <script src="assets/js/home.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+          var video_player = document.getElementById("video_player");
+          var links = video_player.getElementsByTagName("a");
+          video_player.tracks = [
+        './assets/vid/bg-video-1.mp4',
+        './assets/vid/bg-video-2.mp4',
+        './assets/vid/bg-video-3.mp4',
+        './assets/vid/bg-video-4.mp4',
+        './assets/vid/bg-video-5.mp4',
+        './assets/vid/bg-video-6.mp4',
+        './assets/vid/bg-video-7.mp4',
+        './assets/vid/bg-video-8.mp4',
+        './assets/vid/bg-video-9.mp4',
+          ];
+          video_player.remainingTracks = [];
+          for (var i = 0; i < links.length; i++) {
+            links[i].onclick = handler;
+            //video_player.remainingTracks[i] = links[i].href;
+          }
+          for (var i = 0; i < video_player.tracks.length; i++) {
+            //links[i].onclick = handler;
+            video_player.remainingTracks[i] = video_player.tracks[i];
+          }
+          //video_player.remainingTracks = [...video_player.tracks];
+          video_player.lastPlayed =
+            "./assets/vid/bg-video-9.mp4";
+
+          document.getElementById("playlist-next").onclick = randomNextTrack;
+
+          function randomNextTrack() {
+            console.log(video_player.remainingTracks.length);
+            if (video_player.remainingTracks.length == 0) {
+              console.log("emptied out");
+              console.log(video_player.tracks);
+              //video_player.remainingTracks = video_player.tracks;
+              for (var i = 0; i < video_player.tracks.length; i++) {
+                //links[i].onclick = handler;
+                video_player.remainingTracks[i] = video_player.tracks[i];
+              }
+            }
+            console.log(video_player.remainingTracks);
+            //for (var i=links.length; i>0; i--) {
+            var nextTrack = video_player.lastPlayed;
+            while (nextTrack == video_player.lastPlayed) {
+              var random = randomNumber(1);
+              // var random = randomNumber(video_player.remainingTracks.length);
+              var nextTrack = video_player.remainingTracks[random];
+            }
+            video_player.remainingTracks.splice(random, 1);
+            console.log(nextTrack);
+            //console.log(video_player.remainingTracks);
+            playVideo(nextTrack);
+            //}
+          }
+
+          function randomNumber(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+          }
+
+          function playVideo(videoSrc) {
+            video = document.querySelector("#video_player video");
+            //video.removeAttribute("controls");
+            //video.removeAttribute("poster");
+            source = document.querySelectorAll("#video_player video source");
+            source[0].src = videoSrc;
+            //source[1].src = filename + ".webm";
+            video.load();
+            video.play();
+            video_player.lastPlayed = videoSrc;
+          }
+
+          function handler(e) {
+            e.preventDefault();
+            videotarget = this.getAttribute("href");
+            filename =
+              videotarget.substr(0, videotarget.lastIndexOf(".")) || videotarget;
+            videoSrc = filename + ".mp4";
+            playVideo(videoSrc);
+          }
+        });
+      
+      
+  </script>
 </body>
 
 </html>

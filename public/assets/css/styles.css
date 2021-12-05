@@ -262,3 +262,24 @@ img {
     margin-right: auto;
   }
 }
+
+/* Background Header Video */
+.bg-video {
+  margin-left: -30px;
+  position: absolute;
+  border-radius: 16px;
+}
+
+@media screen and (min-width: 576px) {
+  .bg-video {
+    min-width: 1060px;
+    margin-top: 88px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .bg-video {
+    /* max-height: 650px; */
+    max-width: 420px;
+  }
+}
